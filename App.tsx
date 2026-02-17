@@ -13,7 +13,7 @@ const App: React.FC = () => {
   const renderContent = () => {
     switch (activeView) {
       case ViewState.DASHBOARD:
-        return <Dashboard />;
+        return <Dashboard onNavigate={setActiveView} />;
       case ViewState.RAILS:
         return <RailsVisualizer />;
       case ViewState.CAPABILITY:
@@ -23,7 +23,7 @@ const App: React.FC = () => {
       case ViewState.CHAT:
         return <ChatInterface />;
       default:
-        return <Dashboard />;
+        return <Dashboard onNavigate={setActiveView} />;
     }
   };
 
